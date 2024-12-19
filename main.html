@@ -1,87 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-	<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
             color: #333;
         }
 
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #5d6d7e;
+            color: white;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
         h1 {
-            color: blue;
-            margin-bottom: 10px;
+            margin-top: 20px;
         }
 
-        p {
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #5d6d7e;
+        }
+
+        .profile-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .profile-content div {
+            width: 48%;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skill {
+            width: 45%;
             margin-bottom: 20px;
         }
 
-        .section {
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #fff;
-            border-radius: 10px;
+        .skill-bar {
+            height: 10px;
+            background-color: #ddd;
+            margin-top: 10px;
         }
-		.progress-bar {
-    width: 100%;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
 
-.progress {
-    height: 20px;
-    background-color: blue;
-    border-radius: 10px;
-}
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+        .skill-icon {
+            font-size: 50px;
+            margin-right: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #5d6d7e;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+        }
     </style>
 </head>
+
 <body>
-    <div class="section">
-        <h1>Name</h1>
-        <p>Your Name</p>
+
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Your Photo">
+            <h1>John Doe</h1>
+            <p>Web Developer | Designer | Programmer</p>
+        </header>
+
+        <!-- Name Section -->
+        <section id="name">
+            <h2>Name</h2>
+            <p>John Doe</p>
+        </section>
+
+        <!-- Email Section -->
+        <section id="email">
+            <h2>Email</h2>
+            <p>johndoe@example.com</p>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>Full-stack web developer with 5+ years of experience in both front-end and back-end development. Passionate about building responsive and user-friendly websites with a keen eye for design and detail.</p>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>I am a creative, problem-solving web developer who thrives on new challenges. I enjoy coding in various programming languages, designing intuitive user interfaces, and ensuring optimal performance of web applications. In my spare time, I love to experiment with new technologies and contribute to open-source projects.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-bar" style="width: 90%;">
+                        <span style="background-color: #4CAF50;">HTML - 90%</span>
+                    </div>
+                    <div class="skill-bar" style="width: 80%;">
+                        <span style="background-color: #2196F3;">CSS - 80%</span>
+                    </div>
+                    <div class="skill-bar" style="width: 75%;">
+                        <span style="background-color: #FF9800;">JavaScript - 75%</span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-bar" style="width: 85%;">
+                        <span style="background-color: #9C27B0;">React - 85%</span>
+                    </div>
+                    <div class="skill-bar" style="width: 70%;">
+                        <span style="background-color: #607D8B;">Node.js - 70%</span>
+                    </div>
+                    <div class="skill-bar" style="width: 60%;">
+                        <span style="background-color: #FFC107;">Python - 60%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <div class="section">
-        <h1>Email</h1>
-        <p>your.email@example.com</p>
-    </div>
-
-    <div class="section">
-        <h1>Profile</h1>
-        <p>Software Developer</p>
-    </div>
-
-    <div class="section">
-        <h1>About Me</h1>
-        <p>A brief description about yourself.</p>
-    </div>
-
-    <div class="section">
-        <h1>Skills</h1>
-        <p>HTML, CSS, JavaScript</p>
-    </div>
-	<div class="section">
-    <h1>Skills</h1>
-    <p>HTML</p>
-    <div class="progress-bar">
-        <div class="progress" style="width: 90%"></div>
-    </div>
-    <p>CSS</p>
-    <div class="progress-bar">
-        <div class="progress" style="width: 80%"></div>
-    </div>
-    <p>JavaScript</p>
-    <div class="progress-bar">
-        <div class="progress" style="width: 75%"></div>
-    </div>
-		<div class="section">
-    <h1>Picture</h1>
-    <img src="path_to_your_image.jpg" alt="Your Name">
-</div>
-</div>
 </body>
+
 </html>
+
